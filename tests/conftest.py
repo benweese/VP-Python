@@ -32,7 +32,7 @@ def browser():
 
 	path = os.getcwd()
 	if path == "/home/circleci/project":
-		# chrome_options.add_argument("--headless")
+		chrome_options.add_argument("--headless")
 		driver = Chrome(executable_path=path + '/chromedriver_linux', options=chrome_options)
 	else:
 		driver = Chrome(executable_path=path + '/chromedriver', options=chrome_options)
