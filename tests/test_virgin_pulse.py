@@ -27,11 +27,13 @@ def test_1(browser):
 	"""
 	login = LoginPOM(browser)
 	login.load()
+	login.wait()
 	login.login()
 	card = FivePOM(browser)
 	card.wait()
 	while card.is_next():
 		if card.correct_card():
+			card.wait_btn()
 			card.click_ok()
 			card.click_next()
 		else:

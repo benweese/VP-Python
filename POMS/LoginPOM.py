@@ -5,6 +5,8 @@ LoginPOM.py: .
 """
 
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
 import os
 
 
@@ -26,6 +28,7 @@ class LoginPOM(object):
 
     username = (By.ID, 'username')
     password = (By.ID, 'password')
+    submit = (By.CLASS_NAME, 'login-submit')
 
     def __init__(self, browser):
         self.browser = browser
@@ -40,4 +43,8 @@ class LoginPOM(object):
         username_field.send_keys(USER)
         password_field = self.browser.find_element(*self.password)
         password_field.send_keys(PASSWORD)
-        password_field.submit()
+        submit_btn = self.browser.find_element(*self.submit)
+        submit_btn.click()
+
+    def wait(self):
+        WebDriverWait(self.browser, 10).until(EC.visibility_of_element_located(self.username))

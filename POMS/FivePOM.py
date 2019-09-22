@@ -26,12 +26,16 @@ class FivePOM(object):
     """
     got_it = (By.ID, 'triggerCloseCurtain')
     next_card = (By.CLASS_NAME, 'next-card-btn')
+    daily_ribbon = (By.CLASS_NAME, 'daily-card-ribbon')
 
     def __init__(self, browser):
         self.browser = browser
 
     def wait(self):
         WebDriverWait(self.browser, 10).until(EC.visibility_of_element_located(self.next_card))
+
+    def wait_btn(self):
+        WebDriverWait(self.browser, 10).until(EC.visibility_of_element_located(self.got_it))
 
     def is_next(self):
         try:
@@ -46,7 +50,7 @@ class FivePOM(object):
 
     def correct_card(self):
         try:
-            self.browser.find_element(*self.got_it)
+            self.browser.find_element(*self.daily_ribbon)
         except NoSuchElementException:
             return False
         return True
