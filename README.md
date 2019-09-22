@@ -2,9 +2,9 @@
 This project is for practicing Python, Selenium, and Pytest. You can find the link for the template above for creating your own automation. To learn more you can check out the [Wiki](https://github.com/benweese/Python-Automation/wiki) for this repo where I document what I have learned. 
 
 ## Badges
-[![CircleCI](https://circleci.com/gh/benweese/virgin-pulse/tree/master.svg?style=shield)](https://circleci.com/gh/benweese/virgin-pulse/tree/master) 
+[![CircleCI](https://circleci.com/gh/benweese/VP-Python/tree/master.svg?style=shield)](https://circleci.com/gh/benweese/VP-Python/tree/master) 
 
-![GitHub](https://img.shields.io/github/license/benweese/virgin-pulse.svg) ![GitHub issues](https://img.shields.io/github/issues-raw/benweese/virgin-pulse.svg) [![StackShare](http://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](https://stackshare.io/benweese/python-automation)
+![GitHub](https://img.shields.io/github/license/benweese/VP-Python.svg) ![GitHub issues](https://img.shields.io/github/issues-raw/benweese/VP-Python.svg) [![StackShare](http://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](https://stackshare.io/benweese/python-automation)
 
 ## Motivation
 
