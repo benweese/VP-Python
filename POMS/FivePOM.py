@@ -24,8 +24,6 @@ class FivePOM(object):
     This is the Page Object Model used in test_forms_Page.py for the filling out forms section
     of Ultimate QA's Automation Exercises.
     """
-    # (By.CSS_SELECTOR, "#ID button.class")
-    card = (By.CSS_SELECTOR, "programs[card='card']")
     got_it = (By.ID, 'triggerCloseCurtain')
     next_card = (By.CLASS_NAME, 'next-card-btn')
 
@@ -33,7 +31,7 @@ class FivePOM(object):
         self.browser = browser
 
     def wait(self):
-        WebDriverWait(self.browser, 10).until(EC.visibility_of_element_located(*self.next_card))
+        WebDriverWait(self.browser, 10).until(EC.visibility_of_element_located(self.next_card))
 
     def is_next(self):
         try:

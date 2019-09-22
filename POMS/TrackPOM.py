@@ -36,7 +36,7 @@ class TrackPOM(object):
         self.browser.get(self.URL)
 
     def wait(self):
-        WebDriverWait(self.browser, 10).until(EC.visibility_of_element_located(*self.stairs))
+        WebDriverWait(self.browser, 10).until(EC.visibility_of_element_located(self.stairs))
 
     def click_stairs(self):
         ok = self.browser.find_element(*self.stairs)
