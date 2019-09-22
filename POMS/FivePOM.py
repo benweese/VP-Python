@@ -33,7 +33,7 @@ class FivePOM(object):
         self.browser = browser
 
     def wait(self):
-        WebDriverWait(self.browser, 10).until(EC.visibility_of(self.card))
+        WebDriverWait(self.browser, 10).until(EC.visibility_of_element_located(self.card))
 
     def is_next(self):
         try:
