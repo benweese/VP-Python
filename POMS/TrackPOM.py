@@ -5,6 +5,8 @@ LoginPOM.py: .
 """
 
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
 
 
 __author__ = "Ben Weese"
@@ -32,6 +34,9 @@ class TrackPOM(object):
 
     def load(self):
         self.browser.get(self.URL)
+
+    def wait(self):
+        WebDriverWait(self.browser, 10).until(EC.visibility_of(self.stairs))
 
     def click_stairs(self):
         ok = self.browser.find_element(*self.stairs)

@@ -29,6 +29,7 @@ def test_1(browser):
 	login.load()
 	login.login()
 	card = FivePOM(browser)
+	card.wait()
 	while card.is_next():
 		if card.correct_card():
 			card.click_ok()
@@ -37,6 +38,7 @@ def test_1(browser):
 			card.click_next()
 	track = TrackPOM(browser)
 	track.load()
+	track.wait()
 	track.click_stairs()
 	track.track_sleep('7')
 	browser.quit()
